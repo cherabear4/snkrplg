@@ -1,0 +1,17 @@
+*{
+  margin:0;
+}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg{
+  background-image: url("https://wallpaperaccess.com/full/2816713.jpg");
+  width: 100vw;
+  background-size: cover;
+  height: 100vh;
+}
+.bg-op{
+  background:rgba(0, 0, 0, 0.404);
+  height: 100vh;
+}
