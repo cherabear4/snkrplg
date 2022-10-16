@@ -95,7 +95,7 @@ const [shoes, setShoes] = useState([
         <div className='grid grid-cols-2 p-4 gap-4'>
             {shoes.map((shoes) => {
                 return (
-                    <div key={shoes.Name} className='flex flex-col'>
+                    <div key={shoes.id} className='flex flex-col'>
                         <h1 key={shoes.Name} className='text-black'>{shoes.Name} $100</h1>
                         <img key={shoes.Name} src={shoes.imageLink}></img>
                         <Buy shoes={shoes.Name} shoe={shoes.Name}/>

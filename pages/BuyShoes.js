@@ -6,6 +6,42 @@ import Link from 'next/link'
 
 export default function BuyShoes(){
 
+    //entry.1016664077 shoe
+    //entry.304360365 size
+    //entry.625529581 name
+    //entry.1462521678 snap
+
+const [submit, setSubmit] = useState(false);
+    const [formData, setFormData] = useState({
+    "entry.1016664077": "",
+    "entry.304360365": "",
+    "entry.625529581": "",
+    "entry.1462521678": ""
+});
+
+const handleInputData = (input) => (e) => {
+    const { value } = e.target;
+
+    setFormData((prevState) => ({
+        ...prevState,
+        [input]: value
+    }));
+};
+
+async function handleSubmit(e) {
+    e.preventDefault();
+    setSubmit(true);
+
+    let url = `https://docs.google.com/forms/d/e/1FAIpQLSeTGVc_FByny_V8-RIa3k3vYnTRs1G-mdV0l0wYqxQ3Lnk65Q/formResponse?entry.1016664077=${formData["entry.1016664077"]}&entry.304360365=${formData["entry.304360365"]}&entry.625529581=${formData["entry.625529581"]}&entry.1462521678=${formData["entry.1462521678"]}`;
+
+    const res = await fetch(url, {
+        method: "POST",
+        headers: {
+        "Content-Type": "application/x-www-form-urlencoded"
+        }
+    });
+}
+
     return(
         <div>
             
@@ -16,37 +52,58 @@ export default function BuyShoes(){
             <Navbar/>
 
             <div className='bg-gray-200 container mx-auto h-screen'>
-                <h1 className='text-3xl font-bold text-center py-8'>How to buy shoes</h1>
-                <div className='p-8'>
-                    <h1 className='text-3xl font-bold text-center'>Step 1</h1>
-                    <h1 className='text-1xl text-center'>Add me on snapchat and send me a message.</h1>
-                </div>
-                <div className='p-8'>
-                    <h1 className='text-3xl font-bold text-center'>Step 2</h1>
-                    <h1 className='text-1xl text-center'>Be specific with what you want. Example: &quot;Hey, can I get the (Shoe Type) - (Shoe Name/Color) in a Size (your size)?&quot;.</h1>
-                    <h1 className='text-1xl font-bold text-center'>Ex: &quot;Hey, can I get the Jordan 4 - University Blue in a Size 11?&quot;.</h1>
-                </div>
-                <div className='p-8'>
-                    <h1 className='text-3xl font-bold text-center'>Step 3</h1>
-                    <h1 className='text-1xl text-center'>I will ask you to pay the price of the shoe plus a $15 deposit, example: $110(shoe) + $15 (deposit). The deposit will be refunded once you recieve the shoes<br/>
-                    if anything happens to the shoes out of our(buyer and seller) control you will be refunded full price & deposit.
-                    </h1>
-                </div>
-                <div className='p-8'>
-                    <h1 className='text-3xl font-bold text-center'>Step 4</h1>
-                    <h1 className='text-1xl text-center'>
-                        Be patient!!! I cannot stress this enough, the shoes take 8-27 days because they are coming from all over the world, covid-19 does not help at all!<br/>
-                        I will constantly update you and send you quality check pictures.
-                    </h1>
-                </div>
-                <div className='p-8'>
-                    <h1 className='text-3xl font-bold text-center'>Step 5</h1>
-                    <h1 className='text-1xl text-center'>
-                        When they ship in I will give you the shoes immediately and refund your deposit of $15.<br/>
-                        Thanks for buying!
-                    </h1>
-                </div>
                 <h1 className='text-lg font-bold text-center py-3'>Before Buying from (Snkrplg.gq) you agree to the <Link href='/termsandconditions'><p className='text-blue-600'>Terms And Conditions</p></Link></h1>
+                <h1 className='text-lg font-bold text-center py-3'>Leave your snapchat and I will message you with my cashapp and you pay there, I then place your order</h1>
+
+                
+                <div className='flex flex-col p-12 bg-slate-300 shadow-md'>
+                <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSeTGVc_FByny_V8-RIa3k3vYnTRs1G-mdV0l0wYqxQ3Lnk65Q/formResponse" className='gap-8 flex justify-center'>
+                <fieldset>
+                    <label>Name Of Shoe: </label>
+                    <input
+                        required
+                        type="text"
+                        name="entry.1016664077"
+                        onChange={handleInputData("entry.1016664077")}
+                        value={formData["entry.1016664077"]}
+                    />
+                </fieldset>
+                <fieldset>
+                    <label>Size of Shoe: </label>
+                    <input
+                        required
+                        type="text"
+                        name="entry.304360365"
+                        onChange={handleInputData("entry.304360365")}
+                        value={formData["entry.304360365"]}
+                    />
+                </fieldset>
+                <fieldset>
+                    <label>Your Name: </label>
+                    <input
+                        required
+                        type="text"
+                        name="entry.625529581"
+                        onChange={handleInputData("entry.625529581")}
+                        value={formData["entry.625529581"]}
+                    />
+                </fieldset>
+                <fieldset>
+                    <label>Your Snapchat: </label>
+                    <input
+                        required
+                        type="text"
+                        name="entry.1462521678"
+                        onChange={handleInputData("entry.1462521678")}
+                        value={formData["entry.1462521678"]}
+                    />
+                    
+                </fieldset>
+                
+                </form>
+                <button onClick={handleSubmit} className="bg-red-500 w-[50%] mx-auto rounded-md p-2 my-4">Send (I agree to the TOS)</button>
+                </div>
+                
             </div>
             
         </div>
