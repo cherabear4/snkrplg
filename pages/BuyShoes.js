@@ -51,13 +51,13 @@ async function handleSubmit(e) {
             
             <Navbar/>
 
-            <div className='bg-gray-200 container mx-auto h-screen'>
+            <div className='bg-gray-200 h-screen w-screen'>
                 <h1 className='text-lg font-bold text-center py-3'>Before Buying from (Snkrplg.gq) you agree to the <Link href='/termsandconditions'><p className='text-blue-600'>Terms And Conditions</p></Link></h1>
                 <h1 className='text-lg font-bold text-center py-3'>Leave your snapchat and I will message you with my cashapp and you pay there, I then place your order</h1>
 
                 
                 <div className='flex flex-col p-12 bg-slate-300 shadow-md'>
-                <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSeTGVc_FByny_V8-RIa3k3vYnTRs1G-mdV0l0wYqxQ3Lnk65Q/formResponse" className='gap-8 flex justify-center'>
+                <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSeTGVc_FByny_V8-RIa3k3vYnTRs1G-mdV0l0wYqxQ3Lnk65Q/formResponse" className='gap-8 flex flex-col justify-center'>
                 <fieldset>
                     <label>Name Of Shoe: </label>
                     <input
