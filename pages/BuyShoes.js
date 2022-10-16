@@ -23,8 +23,8 @@ export default function BuyShoes(){
                 </div>
                 <div className='p-8'>
                     <h1 className='text-3xl font-bold text-center'>Step 2</h1>
-                    <h1 className='text-1xl text-center'>Be specific with what you want. Example: "Hey, can I get the (Shoe Type) - (Shoe Name/Color) in a Size (your size)?".</h1>
-                    <h1 className='text-1xl font-bold text-center'>Ex: "Hey, can I get the Jordan 4 - University Blue in a Size 11?".</h1>
+                    <h1 className='text-1xl text-center'>Be specific with what you want. Example: &quot;Hey, can I get the (Shoe Type) - (Shoe Name/Color) in a Size (your size)?&quot;.</h1>
+                    <h1 className='text-1xl font-bold text-center'>Ex: &quot;Hey, can I get the Jordan 4 - University Blue in a Size 11?&quot;.</h1>
                 </div>
                 <div className='p-8'>
                     <h1 className='text-3xl font-bold text-center'>Step 3</h1>
