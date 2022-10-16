@@ -36,7 +36,7 @@ export default function BuyShoes(){
                     <h1 className='text-3xl font-bold text-center'>Step 4</h1>
                     <h1 className='text-1xl text-center'>
                         Be patient!!! I cannot stress this enough, the shoes take 8-27 days because they are coming from all over the world, covid-19 does not help at all!<br/>
-                        I will constantly update you and send you quality check pictures and you can decide whether you want to purchase the shoes.
+                        I will constantly update you and send you quality check pictures.
                     </h1>
                 </div>
                 <div className='p-8'>
