@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Buy from './Buy';
 
 function Fours() {
 const [shoes, setShoes] = useState([
@@ -104,6 +105,7 @@ const [shoes, setShoes] = useState([
                     <div key={shoes.Name} className='flex flex-col'>
                         <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
                         <img key={shoes.Name} src={shoes.imageLink}></img>
+                        <Buy shoe={shoes.Name}/>
                     </div>
                 )
             })}

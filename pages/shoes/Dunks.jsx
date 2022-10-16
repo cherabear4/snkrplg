@@ -1,5 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
+import Buy from './Buy';
 
 function Dunks() {
 const [shoes, setShoes] = useState([
@@ -13,7 +14,7 @@ const [shoes, setShoes] = useState([
     },
     {
         Name: "Midnight Navy",
-        imageLink: "https://si.geilicdn.com/open1625671124-1234478995-0823000001814069292b0a2008af_1080_1080.jpg",
+        imageLink: "https://si.geilicdn.com/open1625671124-1234478995-064900000181406932620a23028e_1080_1080.jpg",
     },
     {
         Name: "University Blue",
@@ -95,8 +96,9 @@ const [shoes, setShoes] = useState([
             {shoes.map((shoes) => {
                 return (
                     <div key={shoes.Name} className='flex flex-col'>
-                        <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
+                        <h1 key={shoes.Name} className='text-black'>{shoes.Name} $100</h1>
                         <img key={shoes.Name} src={shoes.imageLink}></img>
+                        <Buy shoes={shoes.Name} shoe={shoes.Name}/>
                     </div>
                 )
             })}
