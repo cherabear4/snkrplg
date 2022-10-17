@@ -59,7 +59,7 @@ async function handleSubmit(e) {
                 <div className='flex flex-col p-12 bg-slate-300 shadow-md'>
                 <form action="https://docs.google.com/forms/u/4/d/e/1FAIpQLSeTGVc_FByny_V8-RIa3k3vYnTRs1G-mdV0l0wYqxQ3Lnk65Q/formResponse" className='gap-8 flex flex-col justify-center'>
                 <fieldset>
-                    <label>Name Of Shoe: </label>
+                    <label>Name of Item: </label>
                     <input
                         required
                         type="text"
@@ -69,7 +69,7 @@ async function handleSubmit(e) {
                     />
                 </fieldset>
                 <fieldset>
-                    <label>Size of Shoe: </label>
+                    <label>Size of Item: </label>
                     <input
                         required
                         type="text"

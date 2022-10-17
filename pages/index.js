@@ -17,6 +17,7 @@ export default function Home() {
                 <ul className='flex flex-row gap-8 font-bold p-4'>
                     <li><Link href='/main' className='hover:text-red-500 hover:cursor-pointer'>Catalog</Link></li>
                     <li><Link href='/BuyShoes' className='hover:text-red-500 hover:cursor-pointer'>Place Order</Link></li>
+                    <li><Link href='/Extra' className='hover:text-red-500 hover:cursor-pointer'>More Products</Link></li>
                 </ul>
                 </div>
             </div>
