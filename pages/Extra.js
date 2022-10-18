@@ -3,6 +3,7 @@ import Navbar from "./navbar/Navbar"
 import Bape from './products/Bape'
 import BB from "./products/BB";
 import { useState } from "react";
+import Misc from "./products/Misc";
 
 export default function Extra(){
 
@@ -25,8 +26,13 @@ export default function Extra(){
     if(slide===2){
     setSlideText("BB Belts");
     setCatalogScreen(<BB/>);
-    setSlide(1);
+    
     }
+    if(slide===2){
+      setSlideText("Misc");
+      setCatalogScreen(<Misc/>);
+      setSlide(1);
+      }
 }
 
     return(
