@@ -1,8 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
-import Buy from './Buy';
 
 function Fours() {
+
+    const redirect = () => {
+        window.location.href="/BuyShoes"
+    }
 const [shoes, setShoes] = useState([
     {
         Name: "Off-White Sail",
@@ -104,8 +107,7 @@ const [shoes, setShoes] = useState([
                 return (
                     <div key={shoes.Name} className='flex flex-col'>
                         <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
-                        <img key={shoes.Name} src={shoes.imageLink}></img>
-                        <Buy shoe={shoes.Name}/>
+                        <img className='image' onClick={redirect} key={shoes.Name} src={shoes.imageLink}></img>
                     </div>
                 )
             })}

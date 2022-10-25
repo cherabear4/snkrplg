@@ -12,7 +12,7 @@ export default function Main() {
   let [slide, setSlide] = useState(1);
   let [slideText, setSlideText] = useState("Click To Change Shoe");
 
-  let [catalogScreen, setCatalogScreen] = useState(<Dunks/>);
+  let [catalogScreen, setCatalogScreen] = useState(<Fours/>);
 
   const changeSlide = () => {
     setSlide(slide+1);
@@ -48,11 +48,12 @@ export default function Main() {
       <div>
       
       <Navbar/>
+      
 
       <main className='w-screen flex justify-center text-white flex-col'>
         <div className='p-8'>
           <h1>Snkrs.plg Catalog</h1>
-          <div className='flex-row flex justify-center'><button onClick={changeSlide} className='p-3 bg-red-500 rounded-lg'>Change Catalog</button> <p className='text-black p-3'> : </p> <p className='text-black p-3 font-bold'>{slideText}</p><p className='text-black p-3'>Note: Ones will be extra $ because we use premium leather</p></div>
+          <div className='flex-row flex justify-center'><button onClick={changeSlide} className='p-3 bg-red-500 rounded-lg'>{slideText}</button></div>
         </div>
         <div>
           {catalogScreen}

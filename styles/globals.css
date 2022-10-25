@@ -6,6 +6,19 @@
   margin:0;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(90, 90, 90);
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+}
+
 .bg{
   background-image: url("https://wallpaperaccess.com/full/2816713.jpg");
   width: 100vw;
@@ -19,4 +32,16 @@
 
 input{
   @apply rounded-lg p-1 m-2;
+}
+
+.image{
+
+}
+
+.image:hover{
+  opacity: 0.5;
+  -moz-transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+  -o-transition: all 0.1s ease-in;
+  transition: all 0.1s ease-in;
 }

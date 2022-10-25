@@ -1,8 +1,13 @@
 import React from 'react'
 import { useState } from 'react'
-import Buy from './Buy';
 
 function Dunks() {
+
+
+    const redirect = () => {
+        window.location.href="/BuyShoes"
+    }
+
 const [shoes, setShoes] = useState([
     {
         Name: "Pandas",
@@ -96,9 +101,8 @@ const [shoes, setShoes] = useState([
             {shoes.map((shoes) => {
                 return (
                     <div key={shoes.id} className='flex flex-col'>
-                        <h1 key={shoes.Name} className='text-black'>{shoes.Name} $100</h1>
-                        <img key={shoes.Name} src={shoes.imageLink}></img>
-                        <Buy shoes={shoes.Name} shoe={shoes.Name}/>
+                        <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
+                        <img className='image' onClick={redirect} key={shoes.Name} src={shoes.imageLink}></img>
                     </div>
                 )
             })}

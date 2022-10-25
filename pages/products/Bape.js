@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Buy from '../shoes/Buy';
 
 function Bape() {
 const [shoes, setShoes] = useState([
@@ -41,15 +40,16 @@ const [shoes, setShoes] = useState([
         imageLink: "https://gw.alicdn.com/bao/uploaded/i2/2933817106/O1CN01nESf3K22Mb0pXF6lA_!!2933817106.jpg"
     },
 ]);
-
+const redirect = () => {
+    window.location.href="/BuyShoes"
+}
     return(
         <div className='grid grid-cols-2 p-4 gap-4'>
             {shoes.map((shoes) => {
                 return (
                     <div key={shoes.Name} className='flex flex-col'>
                         <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
-                        <img key={shoes.Name} src={shoes.imageLink}></img>
-                        <Buy shoe={shoes.Name}/>
+                        <img onClick={redirect} key={shoes.Name} src={shoes.imageLink}></img>
                     </div>
                 )
             })}

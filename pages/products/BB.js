@@ -1,6 +1,5 @@
 import React from 'react'
 import { useState } from 'react'
-import Buy from '../shoes/Buy';
 
 export default function BB(){
 
@@ -34,15 +33,16 @@ export default function BB(){
             imageLink: "https://gw.alicdn.com/bao/uploaded/i2/3690682408/O1CN01KaA7H71TeuV3AtLni_!!3690682408.jpg"
         }
     ]);
-
+    const redirect = () => {
+        window.location.href="/BuyShoes"
+    }
     return(
         <div className='grid grid-cols-2 p-4 gap-4'>
             {shoes.map((shoes) => {
                 return (
                     <div key={shoes.Name} className='flex flex-col'>
                         <h1 key={shoes.Name} className='text-black'>{shoes.Name}</h1>
-                        <img key={shoes.Name} src={shoes.imageLink}></img>
-                        <Buy shoe={shoes.Name}/>
+                        <img onClick={redirect} key={shoes.Name} src={shoes.imageLink}></img>
                     </div>
                 )
             })}
